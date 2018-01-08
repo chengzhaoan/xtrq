@@ -1,0 +1,561 @@
+2018-01-08 17:37:26.070 [ main ] - [ INFO  ] [ Main : 45 ] - Logging ON
+2018-01-08 17:37:45.819 [ main ] - [ INFO  ] [ Main : 45 ] - Logging ON
+2018-01-08 17:53:49.306 [ main ] - [ INFO  ] [ Main : 45 ] - Logging ON
+2018-01-08 17:54:01.103 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a SESSION_CREATED event for session 1
+2018-01-08 17:54:01.119 [ NioProcessor-2 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 186 ] - CREATED
+2018-01-08 17:54:01.119 [ NioProcessor-2 ] - [ DEBUG ] [ mina.FfrqHander : 22 ] - sessionCreated {}1
+2018-01-08 17:54:01.119 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event SESSION_CREATED has been fired for session 1
+2018-01-08 17:54:01.119 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a SESSION_OPENED event for session 1
+2018-01-08 17:54:01.119 [ NioProcessor-2 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 186 ] - OPENED
+2018-01-08 17:54:01.119 [ NioProcessor-2 ] - [ DEBUG ] [ mina.FfrqHander : 26 ] - sessionOpened {}1
+2018-01-08 17:54:01.119 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event SESSION_OPENED has been fired for session 1
+2018-01-08 17:54:01.134 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a MESSAGE_RECEIVED event for session 1
+2018-01-08 17:54:01.134 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.filter.codec.ProtocolCodecFilter : 211 ] - Processing a MESSAGE_RECEIVED for session 1
+2018-01-08 17:54:01.134 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 47 ] - 从TULIP 服务器 /192.168.10.55:57302, 收到字节数92, :
+2018-01-08 17:54:01.134 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 50 ] - 收到字节
+30 31 37 36 23 E0 18 51 BE 4E F3 93 5A 94 2F DF 7C 9C 6A CA E4 99 3A C5 6D FC 1F A0 A0 09 DA DE EE 29 78 46 E8 5D F7 EB 0A 1D B9 CA 52 B6 6E 8B 15 7D 6A 42 40 D1 78 68 E1 00 09 CC 70 EC 13 42 B7 0D 96 32 A6 B4 C6 E0 B7 D4 0A 36 D2 98 EA 5B 57 65 C9 AE 70 36 48 56 83 A8 8F A8
+2018-01-08 17:54:01.134 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event MESSAGE_RECEIVED has been fired for session 1
+2018-01-08 17:54:09.057 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a MESSAGE_RECEIVED event for session 1
+2018-01-08 17:54:09.057 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.filter.codec.ProtocolCodecFilter : 211 ] - Processing a MESSAGE_RECEIVED for session 1
+2018-01-08 17:54:09.057 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 47 ] - 从TULIP 服务器 /192.168.10.55:57302, 收到字节数180, :
+2018-01-08 17:54:09.057 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 50 ] - 收到字节
+23 E0 18 51 BE 4E F3 93 5A 94 2F DF 7C 9C 6A CA E4 99 3A C5 6D FC 1F A0 A0 09 DA DE EE 29 78 46 E8 5D F7 EB 0A 1D B9 CA 52 B6 6E 8B 15 7D 6A 42 40 D1 78 68 E1 00 09 CC 70 EC 13 42 B7 0D 96 32 A6 B4 C6 E0 B7 D4 0A 36 D2 98 EA 5B 57 65 C9 AE 70 36 48 56 83 A8 8F A8 30 31 37 36 23 E0 18 51 BE 4E F3 93 5A 94 2F DF 7C 9C 6A CA E4 99 3A C5 6D FC 1F A0 A0 09 DA DE EE 29 78 46 E8 5D F7 EB 0A 1D B9 CA 52 B6 6E 8B 15 7D 6A 42 40 D1 78 68 E1 00 09 CC 70 EC 13 42 B7 0D 96 32 A6 B4 C6 E0 B7 D4 0A 36 D2 98 EA 5B 57 65 C9 AE 70 36 48 56 83 A8 8F A8
+2018-01-08 17:54:09.057 [ NioProcessor-2 ] - [ WARN  ] [ org.apache.mina.filter.logging.LoggingFilter : 130 ] - EXCEPTION :
+org.apache.mina.filter.codec.ProtocolDecoderException: java.lang.NumberFormatException: For input string: "#àQ" (Hexdump: 30 31 37 36 23 E0 18 51 BE 4E F3 93 5A 94 2F DF 7C 9C 6A CA E4 99 3A C5 6D FC 1F A0 A0 09 DA DE EE 29 78 46 E8 5D F7 EB 0A 1D B9 CA 52 B6 6E 8B 15 7D 6A 42 40 D1 78 68 E1 00 09 CC 70 EC 13 42 B7 0D 96 32 A6 B4 C6 E0 B7 D4 0A 36 D2 98 EA 5B 57 65 C9 AE 70 36 48 56 83 A8 8F A8)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:240) ~[mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.logging.MdcInjectionFilter.filter(MdcInjectionFilter.java:135) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.util.CommonEventFilter.messageReceived(CommonEventFilter.java:70) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterAdapter.messageReceived(IoFilterAdapter.java:109) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.fireMessageReceived(DefaultIoFilterChain.java:535) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:703) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64) [mina-core-2.0.16.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_151]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_151]
+Caused by: java.lang.NumberFormatException: For input string: "#àQ"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.8.0_151]
+	at java.lang.Integer.parseInt(Integer.java:569) ~[na:1.8.0_151]
+	at java.lang.Integer.parseInt(Integer.java:615) ~[na:1.8.0_151]
+	at mina.TulipCodecFactory$TulipDecoder.doDecode(TulipCodecFactory.java:60) ~[classes/:na]
+	at org.apache.mina.filter.codec.CumulativeProtocolDecoder.decode(CumulativeProtocolDecoder.java:181) ~[mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:231) ~[mina-core-2.0.16.jar:na]
+	... 21 common frames omitted
+2018-01-08 17:54:09.072 [ NioProcessor-2 ] - [ WARN  ] [ mina.FfrqHander : 45 ] - EXCEPTION, please implement mina.TulipHander.exceptionCaught() for proper handling:
+org.apache.mina.filter.codec.ProtocolDecoderException: java.lang.NumberFormatException: For input string: "#àQ" (Hexdump: 30 31 37 36 23 E0 18 51 BE 4E F3 93 5A 94 2F DF 7C 9C 6A CA E4 99 3A C5 6D FC 1F A0 A0 09 DA DE EE 29 78 46 E8 5D F7 EB 0A 1D B9 CA 52 B6 6E 8B 15 7D 6A 42 40 D1 78 68 E1 00 09 CC 70 EC 13 42 B7 0D 96 32 A6 B4 C6 E0 B7 D4 0A 36 D2 98 EA 5B 57 65 C9 AE 70 36 48 56 83 A8 8F A8)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:240) ~[mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.logging.MdcInjectionFilter.filter(MdcInjectionFilter.java:135) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.util.CommonEventFilter.messageReceived(CommonEventFilter.java:70) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterAdapter.messageReceived(IoFilterAdapter.java:109) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.fireMessageReceived(DefaultIoFilterChain.java:535) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:703) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64) [mina-core-2.0.16.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_151]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_151]
+Caused by: java.lang.NumberFormatException: For input string: "#àQ"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.8.0_151]
+	at java.lang.Integer.parseInt(Integer.java:569) ~[na:1.8.0_151]
+	at java.lang.Integer.parseInt(Integer.java:615) ~[na:1.8.0_151]
+	at mina.TulipCodecFactory$TulipDecoder.doDecode(TulipCodecFactory.java:60) ~[classes/:na]
+	at org.apache.mina.filter.codec.CumulativeProtocolDecoder.decode(CumulativeProtocolDecoder.java:181) ~[mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:231) ~[mina-core-2.0.16.jar:na]
+	... 21 common frames omitted
+2018-01-08 17:54:09.072 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event MESSAGE_RECEIVED has been fired for session 1
+2018-01-08 18:05:25.032 [ main ] - [ INFO  ] [ Main : 45 ] - Logging ON
+2018-01-08 18:05:48.877 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a SESSION_CREATED event for session 1
+2018-01-08 18:05:48.877 [ NioProcessor-2 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 186 ] - CREATED
+2018-01-08 18:05:48.877 [ NioProcessor-2 ] - [ DEBUG ] [ mina.FfrqHander : 22 ] - sessionCreated {}1
+2018-01-08 18:05:48.877 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event SESSION_CREATED has been fired for session 1
+2018-01-08 18:05:48.877 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a SESSION_OPENED event for session 1
+2018-01-08 18:05:48.877 [ NioProcessor-2 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 186 ] - OPENED
+2018-01-08 18:05:48.877 [ NioProcessor-2 ] - [ DEBUG ] [ mina.FfrqHander : 26 ] - sessionOpened {}1
+2018-01-08 18:05:48.877 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event SESSION_OPENED has been fired for session 1
+2018-01-08 18:05:48.892 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a MESSAGE_RECEIVED event for session 1
+2018-01-08 18:05:48.892 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.filter.codec.ProtocolCodecFilter : 211 ] - Processing a MESSAGE_RECEIVED for session 1
+2018-01-08 18:05:48.892 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 47 ] - 从TULIP 服务器 /192.168.10.55:57471, 收到字节数92, :
+2018-01-08 18:05:48.892 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 50 ] - 收到字节
+30 31 37 36 23 E0 18 51 BE 4E F3 93 5A 94 2F DF 7C 9C 6A CA E4 99 3A C5 6D FC 1F A0 A0 09 DA DE EE 29 78 46 E8 5D F7 EB 0A 1D B9 CA 52 B6 6E 8B 15 7D 6A 42 40 D1 78 68 E1 00 09 CC 70 EC 13 42 B7 0D 96 32 A6 B4 C6 E0 B7 D4 0A 36 D2 98 EA 5B 57 65 C9 AE 70 36 48 56 83 A8 8F A8
+2018-01-08 18:05:59.708 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 62 ] - bodylen = 176
+2018-01-08 18:07:16.055 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event MESSAGE_RECEIVED has been fired for session 1
+2018-01-08 18:08:20.705 [ main ] - [ INFO  ] [ Main : 45 ] - Logging ON
+2018-01-08 18:08:26.873 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a SESSION_CREATED event for session 1
+2018-01-08 18:08:26.873 [ NioProcessor-2 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 186 ] - CREATED
+2018-01-08 18:08:26.888 [ NioProcessor-2 ] - [ DEBUG ] [ mina.FfrqHander : 22 ] - sessionCreated {}1
+2018-01-08 18:08:26.888 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event SESSION_CREATED has been fired for session 1
+2018-01-08 18:08:26.888 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a SESSION_OPENED event for session 1
+2018-01-08 18:08:26.888 [ NioProcessor-2 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 186 ] - OPENED
+2018-01-08 18:08:26.888 [ NioProcessor-2 ] - [ DEBUG ] [ mina.FfrqHander : 26 ] - sessionOpened {}1
+2018-01-08 18:08:26.888 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event SESSION_OPENED has been fired for session 1
+2018-01-08 18:08:35.092 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a MESSAGE_RECEIVED event for session 1
+2018-01-08 18:08:35.108 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.filter.codec.ProtocolCodecFilter : 211 ] - Processing a MESSAGE_RECEIVED for session 1
+2018-01-08 18:08:35.108 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 47 ] - 从TULIP 服务器 /192.168.10.55:57516, 收到字节数92, :
+2018-01-08 18:08:35.108 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 50 ] - 收到字节
+30 30 38 38 23 E0 18 51 BE 4E F3 93 5A 94 2F DF 7C 9C 6A CA E4 99 3A C5 6D FC 1F A0 A0 09 DA DE EE 29 78 46 E8 5D F7 EB 0A 1D B9 CA 52 B6 6E 8B 15 7D 6A 42 40 D1 78 68 E1 00 09 CC 70 EC 13 42 B7 0D 96 32 A6 B4 C6 E0 B7 D4 0A 36 D2 98 EA 5B 57 65 C9 AE 70 36 48 56 83 A8 8F A8
+2018-01-08 18:08:35.108 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 62 ] - bodylen = 88
+2018-01-08 18:08:35.108 [ NioProcessor-2 ] - [ WARN  ] [ org.apache.mina.filter.logging.LoggingFilter : 130 ] - EXCEPTION :
+org.apache.mina.filter.codec.ProtocolDecoderException: java.lang.IndexOutOfBoundsException (Hexdump: 30 30 38 38 23 E0 18 51 BE 4E F3 93 5A 94 2F DF 7C 9C 6A CA E4 99 3A C5 6D FC 1F A0 A0 09 DA DE EE 29 78 46 E8 5D F7 EB 0A 1D B9 CA 52 B6 6E 8B 15 7D 6A 42 40 D1 78 68 E1 00 09 CC 70 EC 13 42 B7 0D 96 32 A6 B4 C6 E0 B7 D4 0A 36 D2 98 EA 5B 57 65 C9 AE 70 36 48 56 83 A8 8F A8)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:240) ~[mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.logging.MdcInjectionFilter.filter(MdcInjectionFilter.java:135) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.util.CommonEventFilter.messageReceived(CommonEventFilter.java:70) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterAdapter.messageReceived(IoFilterAdapter.java:109) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.fireMessageReceived(DefaultIoFilterChain.java:535) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:703) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64) [mina-core-2.0.16.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_151]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_151]
+Caused by: java.lang.IndexOutOfBoundsException: null
+	at java.nio.Buffer.checkBounds(Buffer.java:567) ~[na:1.8.0_151]
+	at java.nio.HeapByteBuffer.get(HeapByteBuffer.java:149) ~[na:1.8.0_151]
+	at org.apache.mina.core.buffer.AbstractIoBuffer.get(AbstractIoBuffer.java:625) ~[mina-core-2.0.16.jar:na]
+	at mina.TulipCodecFactory$TulipDecoder.doDecode(TulipCodecFactory.java:72) ~[classes/:na]
+	at org.apache.mina.filter.codec.CumulativeProtocolDecoder.decode(CumulativeProtocolDecoder.java:181) ~[mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:231) ~[mina-core-2.0.16.jar:na]
+	... 21 common frames omitted
+2018-01-08 18:08:35.123 [ NioProcessor-2 ] - [ WARN  ] [ mina.FfrqHander : 45 ] - EXCEPTION, please implement mina.TulipHander.exceptionCaught() for proper handling:
+org.apache.mina.filter.codec.ProtocolDecoderException: java.lang.IndexOutOfBoundsException (Hexdump: 30 30 38 38 23 E0 18 51 BE 4E F3 93 5A 94 2F DF 7C 9C 6A CA E4 99 3A C5 6D FC 1F A0 A0 09 DA DE EE 29 78 46 E8 5D F7 EB 0A 1D B9 CA 52 B6 6E 8B 15 7D 6A 42 40 D1 78 68 E1 00 09 CC 70 EC 13 42 B7 0D 96 32 A6 B4 C6 E0 B7 D4 0A 36 D2 98 EA 5B 57 65 C9 AE 70 36 48 56 83 A8 8F A8)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:240) ~[mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.logging.MdcInjectionFilter.filter(MdcInjectionFilter.java:135) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.util.CommonEventFilter.messageReceived(CommonEventFilter.java:70) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterAdapter.messageReceived(IoFilterAdapter.java:109) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.fireMessageReceived(DefaultIoFilterChain.java:535) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:703) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64) [mina-core-2.0.16.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_151]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_151]
+Caused by: java.lang.IndexOutOfBoundsException: null
+	at java.nio.Buffer.checkBounds(Buffer.java:567) ~[na:1.8.0_151]
+	at java.nio.HeapByteBuffer.get(HeapByteBuffer.java:149) ~[na:1.8.0_151]
+	at org.apache.mina.core.buffer.AbstractIoBuffer.get(AbstractIoBuffer.java:625) ~[mina-core-2.0.16.jar:na]
+	at mina.TulipCodecFactory$TulipDecoder.doDecode(TulipCodecFactory.java:72) ~[classes/:na]
+	at org.apache.mina.filter.codec.CumulativeProtocolDecoder.decode(CumulativeProtocolDecoder.java:181) ~[mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:231) ~[mina-core-2.0.16.jar:na]
+	... 21 common frames omitted
+2018-01-08 18:08:35.123 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event MESSAGE_RECEIVED has been fired for session 1
+2018-01-08 18:10:05.134 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a SESSION_IDLE event for session 1
+2018-01-08 18:10:05.134 [ NioProcessor-2 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 186 ] - IDLE
+2018-01-08 18:10:05.134 [ NioProcessor-2 ] - [ DEBUG ] [ mina.FfrqHander : 39 ] - sessionIdle {}1
+2018-01-08 18:10:05.134 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event SESSION_IDLE has been fired for session 1
+2018-01-08 18:10:05.134 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a CLOSE event for session 1
+2018-01-08 18:10:05.134 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event CLOSE has been fired for session 1
+2018-01-08 18:10:05.134 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a SESSION_CLOSED event for session 1
+2018-01-08 18:10:05.134 [ NioProcessor-2 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 186 ] - CLOSED
+2018-01-08 18:10:05.134 [ NioProcessor-2 ] - [ DEBUG ] [ mina.FfrqHander : 30 ] - sessionClosed {}1
+2018-01-08 18:10:05.134 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event SESSION_CLOSED has been fired for session 1
+2018-01-08 18:10:30.294 [ main ] - [ INFO  ] [ Main : 45 ] - Logging ON
+2018-01-08 18:10:38.904 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a SESSION_CREATED event for session 1
+2018-01-08 18:10:38.919 [ NioProcessor-2 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 186 ] - CREATED
+2018-01-08 18:10:38.919 [ NioProcessor-2 ] - [ DEBUG ] [ mina.FfrqHander : 22 ] - sessionCreated {}1
+2018-01-08 18:10:38.919 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event SESSION_CREATED has been fired for session 1
+2018-01-08 18:10:38.919 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a SESSION_OPENED event for session 1
+2018-01-08 18:10:38.919 [ NioProcessor-2 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 186 ] - OPENED
+2018-01-08 18:10:38.919 [ NioProcessor-2 ] - [ DEBUG ] [ mina.FfrqHander : 26 ] - sessionOpened {}1
+2018-01-08 18:10:38.919 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event SESSION_OPENED has been fired for session 1
+2018-01-08 18:10:41.810 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a MESSAGE_RECEIVED event for session 1
+2018-01-08 18:10:41.810 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.filter.codec.ProtocolCodecFilter : 211 ] - Processing a MESSAGE_RECEIVED for session 1
+2018-01-08 18:10:41.810 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 47 ] - 从TULIP 服务器 /192.168.10.55:57553, 收到字节数92, :
+2018-01-08 18:10:41.810 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 50 ] - 收到字节
+30 30 38 38 23 E0 18 51 BE 4E F3 93 5A 94 2F DF 7C 9C 6A CA E4 99 3A C5 6D FC 1F A0 A0 09 DA DE EE 29 78 46 E8 5D F7 EB 0A 1D B9 CA 52 B6 6E 8B 15 7D 6A 42 40 D1 78 68 E1 00 09 CC 70 EC 13 42 B7 0D 96 32 A6 B4 C6 E0 B7 D4 0A 36 D2 98 EA 5B 57 65 C9 AE 70 36 48 56 83 A8 8F A8
+2018-01-08 18:10:41.810 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 62 ] - bodylen = 88
+2018-01-08 18:10:41.826 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 77 ] - 收到的峰峰燃气报文体为
+本次DUMP数据【        88】字节
+   0 : 00 01 02 03 04 05 06 07    08 09 0A 0B 0C 0D 0E 0F : 123456789ABCDEF
+0000 : 30 30 38 38 23 E0 18 51    BE 4E F3 93 5A 94 2F DF :0088#�Q綨髶Z�/�
+0001 : 7C 9C 6A CA E4 99 3A C5    6D FC 1F A0 A0 09 DA DE :|渏输�:舖�牋	谵
+0002 : EE 29 78 46 E8 5D F7 EB    0A 1D B9 CA 52 B6 6E 8B :�)xF鑍麟
+故R秐�
+0003 : 15 7D 6A 42 40 D1 78 68    E1 00 09 CC 70 EC 13 42 :}jB@褁h� 	蘰�B
+0004 : B7 0D 96 32 A6 B4 C6 E0    B7 D4 0A 36 D2 98 EA 5B :��2Υ凄吩
+6覙闧
+0006 : 57 65 C9 AE 70 36 48 56                            : We僧p6HV
+
+2018-01-08 18:10:41.826 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 47 ] - 从TULIP 服务器 /192.168.10.55:57553, 收到字节数4, :
+2018-01-08 18:10:41.826 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 50 ] - 收到字节
+83 A8 8F A8
+2018-01-08 18:10:41.826 [ NioProcessor-2 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 157 ] - RECEIVED: ffrq.FfrqBody@4d32c09
+2018-01-08 18:10:41.826 [ NioProcessor-2 ] - [ INFO  ] [ mina.FfrqHander : 55 ] - 从Tulip收到如下消息：
+2018-01-08 18:10:41.826 [ NioProcessor-2 ] - [ INFO  ] [ mina.FfrqHander : 56 ] - 从如下地址收到消息  :/192.168.10.55:57553
+2018-01-08 18:10:41.841 [ NioProcessor-8 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 186 ] - CREATED
+2018-01-08 18:10:41.841 [ NioProcessor-8 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a SESSION_CREATED event for session 2
+2018-01-08 18:10:41.841 [ NioProcessor-8 ] - [ DEBUG ] [ mina.FfrqHander : 19 ] - sessionCreated {}2
+2018-01-08 18:10:41.841 [ NioProcessor-2 ] - [ DEBUG ] [ utils.SocketUtils : 60 ] - 链接成功2,/192.168.10.55:60000
+2018-01-08 18:10:41.857 [ NioProcessor-8 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event SESSION_CREATED has been fired for session 2
+2018-01-08 18:10:41.857 [ NioProcessor-8 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 186 ] - OPENED
+2018-01-08 18:10:41.857 [ NioProcessor-8 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a SESSION_OPENED event for session 2
+2018-01-08 18:10:41.857 [ NioProcessor-8 ] - [ DEBUG ] [ mina.FfrqHander : 23 ] - sessionOpened {}2
+2018-01-08 18:10:41.857 [ NioProcessor-8 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event SESSION_OPENED has been fired for session 2
+2018-01-08 18:10:42.295 [ NioProcessor-2 ] - [ INFO  ] [ mina.FfrqHander : 68 ] - 加密完成后  :本次DUMP数据【        88】字节
+   0 : 00 01 02 03 04 05 06 07    08 09 0A 0B 0C 0D 0E 0F : 123456789ABCDEF
+0000 : 91 36 6E 76 D1 53 7D 9B    EB EC F3 09 21 70 48 E9 :�6nv裇}涬祗	!pH�
+0001 : DA BC 4D DE B2 01 AF EC    1A FD 04 CD DC 45 CB D9 :诩M薏�蛙E速
+0002 : BC 65 42 FF A1 8A 13 DB    E3 56 11 DC AE 77 6B 84 :糴B�坫V墚wk�
+0003 : 92 77 A3 5F 6B 85 2B 1A    60 0A 94 AA 39 ED 7D C4 :抴k�+`
+敧9韢�
+0004 : C7 78 BE 7C 08 3F BA CE    5E 9E E8 E2 F0 B3 63 44 :莤緗?何^炶怵砪D
+0006 : F6 61 A1 26 2F 41 0A 06                            : 鯽�&/A
+
+
+2018-01-08 18:10:42.310 [ NioProcessor-2 ] - [ DEBUG ] [ mina.XtrlCodecFactory$XtrlEncoder : 48 ] - 向tulip发送收数据
+本次DUMP数据【       128】字节
+   0 : 00 01 02 03 04 05 06 07    08 09 0A 0B 0C 0D 0E 0F : 123456789ABCDEF
+0000 : 50 4B 48 44 47 41 53 30    30 38 38 30 31 31 38 32 :PKHDGAS008801182
+0001 : 36 91 36 6E 76 D1 53 7D    9B EB EC F3 09 21 70 48 :6�6nv裇}涬祗	!pH
+0002 : E9 DA BC 4D DE B2 01 AF    EC 1A FD 04 CD DC 45 CB :橼糓薏�蛙E�
+0003 : D9 BC 65 42 FF A1 8A 13    DB E3 56 11 DC AE 77 6B :偌eB�坫V墚wk
+0004 : 84 92 77 A3 5F 6B 85 2B    1A 60 0A 94 AA 39 ED 7D :剴wk�+`
+敧9韢
+0005 : C4 C7 78 BE 7C 08 3F BA    CE 5E 9E E8 E2 F0 B3 63 :那x緗?何^炶怵砪
+0006 : 44 F6 61 A1 26 2F 41 0A    06 00 00 00 00 00 00 00 :D鯽�&/A
+       
+0007 : 00 00 00 00 00 00 00 00    00 00 00 00 00 00 00 00 :                
+
+2018-01-08 18:10:42.310 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a WRITE event for session 2
+2018-01-08 18:10:42.310 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event WRITE has been fired for session 2
+2018-01-08 18:10:42.310 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a WRITE event for session 2
+2018-01-08 18:10:42.310 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event WRITE has been fired for session 2
+2018-01-08 18:10:42.310 [ NioProcessor-8 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 157 ] - SENT: ffrq.FfrqBody@4d32c09
+2018-01-08 18:10:42.310 [ NioProcessor-8 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a MESSAGE_SENT event for session 2
+2018-01-08 18:10:42.310 [ NioProcessor-8 ] - [ WARN  ] [ mina.FfrqHander : 71 ] - 消息发往峰峰燃气服务器
+2018-01-08 18:10:42.310 [ NioProcessor-8 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event MESSAGE_SENT has been fired for session 2
+2018-01-08 18:10:42.310 [ NioProcessor-2 ] - [ WARN  ] [ org.apache.mina.filter.logging.LoggingFilter : 130 ] - EXCEPTION :
+org.apache.mina.filter.codec.ProtocolDecoderException: java.lang.NumberFormatException: For input string: "¨¨" (Hexdump: 30 30 38 38 23 E0 18 51 BE 4E F3 93 5A 94 2F DF 7C 9C 6A CA E4 99 3A C5 6D FC 1F A0 A0 09 DA DE EE 29 78 46 E8 5D F7 EB 0A 1D B9 CA 52 B6 6E 8B 15 7D 6A 42 40 D1 78 68 E1 00 09 CC 70 EC 13 42 B7 0D 96 32 A6 B4 C6 E0 B7 D4 0A 36 D2 98 EA 5B 57 65 C9 AE 70 36 48 56 83 A8 8F A8)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:240) ~[mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.logging.MdcInjectionFilter.filter(MdcInjectionFilter.java:135) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.util.CommonEventFilter.messageReceived(CommonEventFilter.java:70) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterAdapter.messageReceived(IoFilterAdapter.java:109) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.fireMessageReceived(DefaultIoFilterChain.java:535) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:703) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64) [mina-core-2.0.16.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_151]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_151]
+Caused by: java.lang.NumberFormatException: For input string: "¨¨"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.8.0_151]
+	at java.lang.Integer.parseInt(Integer.java:580) ~[na:1.8.0_151]
+	at java.lang.Integer.parseInt(Integer.java:615) ~[na:1.8.0_151]
+	at mina.TulipCodecFactory$TulipDecoder.doDecode(TulipCodecFactory.java:60) ~[classes/:na]
+	at org.apache.mina.filter.codec.CumulativeProtocolDecoder.decode(CumulativeProtocolDecoder.java:181) ~[mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:231) ~[mina-core-2.0.16.jar:na]
+	... 21 common frames omitted
+2018-01-08 18:10:42.310 [ NioProcessor-2 ] - [ WARN  ] [ mina.FfrqHander : 45 ] - EXCEPTION, please implement mina.TulipHander.exceptionCaught() for proper handling:
+org.apache.mina.filter.codec.ProtocolDecoderException: java.lang.NumberFormatException: For input string: "¨¨" (Hexdump: 30 30 38 38 23 E0 18 51 BE 4E F3 93 5A 94 2F DF 7C 9C 6A CA E4 99 3A C5 6D FC 1F A0 A0 09 DA DE EE 29 78 46 E8 5D F7 EB 0A 1D B9 CA 52 B6 6E 8B 15 7D 6A 42 40 D1 78 68 E1 00 09 CC 70 EC 13 42 B7 0D 96 32 A6 B4 C6 E0 B7 D4 0A 36 D2 98 EA 5B 57 65 C9 AE 70 36 48 56 83 A8 8F A8)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:240) ~[mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.logging.MdcInjectionFilter.filter(MdcInjectionFilter.java:135) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.util.CommonEventFilter.messageReceived(CommonEventFilter.java:70) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterAdapter.messageReceived(IoFilterAdapter.java:109) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.fireMessageReceived(DefaultIoFilterChain.java:535) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:703) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64) [mina-core-2.0.16.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_151]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_151]
+Caused by: java.lang.NumberFormatException: For input string: "¨¨"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.8.0_151]
+	at java.lang.Integer.parseInt(Integer.java:580) ~[na:1.8.0_151]
+	at java.lang.Integer.parseInt(Integer.java:615) ~[na:1.8.0_151]
+	at mina.TulipCodecFactory$TulipDecoder.doDecode(TulipCodecFactory.java:60) ~[classes/:na]
+	at org.apache.mina.filter.codec.CumulativeProtocolDecoder.decode(CumulativeProtocolDecoder.java:181) ~[mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:231) ~[mina-core-2.0.16.jar:na]
+	... 21 common frames omitted
+2018-01-08 18:10:42.326 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event MESSAGE_RECEIVED has been fired for session 1
+2018-01-08 18:18:07.977 [ main ] - [ INFO  ] [ Main : 45 ] - Logging ON
+2018-01-08 18:18:20.431 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a SESSION_CREATED event for session 1
+2018-01-08 18:18:20.431 [ NioProcessor-2 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 186 ] - CREATED
+2018-01-08 18:18:20.431 [ NioProcessor-2 ] - [ DEBUG ] [ mina.FfrqHander : 22 ] - sessionCreated {}1
+2018-01-08 18:18:20.431 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event SESSION_CREATED has been fired for session 1
+2018-01-08 18:18:20.431 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a SESSION_OPENED event for session 1
+2018-01-08 18:18:20.431 [ NioProcessor-2 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 186 ] - OPENED
+2018-01-08 18:18:20.431 [ NioProcessor-2 ] - [ DEBUG ] [ mina.FfrqHander : 26 ] - sessionOpened {}1
+2018-01-08 18:18:20.431 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event SESSION_OPENED has been fired for session 1
+2018-01-08 18:18:21.853 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a MESSAGE_RECEIVED event for session 1
+2018-01-08 18:18:21.853 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.filter.codec.ProtocolCodecFilter : 211 ] - Processing a MESSAGE_RECEIVED for session 1
+2018-01-08 18:18:21.853 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 47 ] - 从TULIP 服务器 /192.168.10.55:58029, 收到字节数92, :
+2018-01-08 18:18:21.853 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 50 ] - 收到字节
+30 30 38 38 23 E0 18 51 BE 4E F3 93 5A 94 2F DF 7C 9C 6A CA E4 99 3A C5 6D FC 1F A0 A0 09 DA DE EE 29 78 46 E8 5D F7 EB 0A 1D B9 CA 52 B6 6E 8B 15 7D 6A 42 40 D1 78 68 E1 00 09 CC 70 EC 13 42 B7 0D 96 32 A6 B4 C6 E0 B7 D4 0A 36 D2 98 EA 5B 57 65 C9 AE 70 36 48 56 83 A8 8F A8
+2018-01-08 18:18:21.853 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 62 ] - bodylen = 88
+2018-01-08 18:18:21.853 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 77 ] - 收到的峰峰燃气报文体为
+本次DUMP数据【        88】字节
+   0 : 00 01 02 03 04 05 06 07    08 09 0A 0B 0C 0D 0E 0F : 123456789ABCDEF
+0000 : 30 30 38 38 23 E0 18 51    BE 4E F3 93 5A 94 2F DF :0088#�Q綨髶Z�/�
+0001 : 7C 9C 6A CA E4 99 3A C5    6D FC 1F A0 A0 09 DA DE :|渏输�:舖�牋	谵
+0002 : EE 29 78 46 E8 5D F7 EB    0A 1D B9 CA 52 B6 6E 8B :�)xF鑍麟
+故R秐�
+0003 : 15 7D 6A 42 40 D1 78 68    E1 00 09 CC 70 EC 13 42 :}jB@褁h� 	蘰�B
+0004 : B7 0D 96 32 A6 B4 C6 E0    B7 D4 0A 36 D2 98 EA 5B :��2Υ凄吩
+6覙闧
+0006 : 57 65 C9 AE 70 36 48 56                            : We僧p6HV
+
+2018-01-08 18:18:21.853 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 47 ] - 从TULIP 服务器 /192.168.10.55:58029, 收到字节数4, :
+2018-01-08 18:18:21.853 [ NioProcessor-2 ] - [ DEBUG ] [ mina.TulipCodecFactory$TulipDecoder : 50 ] - 收到字节
+83 A8 8F A8
+2018-01-08 18:18:21.868 [ NioProcessor-2 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 157 ] - RECEIVED: ffrq.FfrqBody@51642b65
+2018-01-08 18:18:21.868 [ NioProcessor-2 ] - [ INFO  ] [ mina.FfrqHander : 55 ] - 从Tulip收到如下消息：
+2018-01-08 18:18:21.868 [ NioProcessor-2 ] - [ INFO  ] [ mina.FfrqHander : 56 ] - 从如下地址收到消息  :/192.168.10.55:58029
+2018-01-08 18:18:21.884 [ NioProcessor-8 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 186 ] - CREATED
+2018-01-08 18:18:21.884 [ NioProcessor-8 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a SESSION_CREATED event for session 2
+2018-01-08 18:18:21.884 [ NioProcessor-8 ] - [ DEBUG ] [ mina.FfrqHander : 19 ] - sessionCreated {}2
+2018-01-08 18:18:21.884 [ NioProcessor-2 ] - [ DEBUG ] [ utils.SocketUtils : 60 ] - 链接成功2,/192.168.10.55:60000
+2018-01-08 18:18:21.884 [ NioProcessor-8 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event SESSION_CREATED has been fired for session 2
+2018-01-08 18:18:21.884 [ NioProcessor-8 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 186 ] - OPENED
+2018-01-08 18:18:21.884 [ NioProcessor-8 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a SESSION_OPENED event for session 2
+2018-01-08 18:18:21.884 [ NioProcessor-8 ] - [ DEBUG ] [ mina.FfrqHander : 23 ] - sessionOpened {}2
+2018-01-08 18:18:21.884 [ NioProcessor-8 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event SESSION_OPENED has been fired for session 2
+2018-01-08 18:18:22.321 [ NioProcessor-2 ] - [ INFO  ] [ mina.FfrqHander : 68 ] - 加密完成后  :本次DUMP数据【        88】字节
+   0 : 00 01 02 03 04 05 06 07    08 09 0A 0B 0C 0D 0E 0F : 123456789ABCDEF
+0000 : 91 36 6E 76 D1 53 7D 9B    EB EC F3 09 21 70 48 E9 :�6nv裇}涬祗	!pH�
+0001 : DA BC 4D DE B2 01 AF EC    1A FD 04 CD DC 45 CB D9 :诩M薏�蛙E速
+0002 : BC 65 42 FF A1 8A 13 DB    E3 56 11 DC AE 77 6B 84 :糴B�坫V墚wk�
+0003 : 92 77 A3 5F 6B 85 2B 1A    60 0A 94 AA 39 ED 7D C4 :抴k�+`
+敧9韢�
+0004 : C7 78 BE 7C 08 3F BA CE    5E 9E E8 E2 F0 B3 63 44 :莤緗?何^炶怵砪D
+0006 : F6 61 A1 26 2F 41 0A 06                            : 鯽�&/A
+
+
+2018-01-08 18:18:22.337 [ NioProcessor-2 ] - [ WARN  ] [ org.apache.mina.filter.logging.LoggingFilter : 130 ] - EXCEPTION :
+org.apache.mina.filter.codec.ProtocolEncoderException: java.lang.IllegalArgumentException: buf is empty. Forgot to call flip()?
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.filterWrite(ProtocolCodecFilter.java:330) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callPreviousFilterWrite(DefaultIoFilterChain.java:629) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1500(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.filterWrite(DefaultIoFilterChain.java:957) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.filterWrite(DefaultIoFilterChain.java:881) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callPreviousFilterWrite(DefaultIoFilterChain.java:629) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.fireFilterWrite(DefaultIoFilterChain.java:622) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.session.AbstractIoSession.write(AbstractIoSession.java:574) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.session.AbstractIoSession.write(AbstractIoSession.java:519) [mina-core-2.0.16.jar:na]
+	at mina.TulipHander.messageReceived(TulipHander.java:69) [classes/:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.logging.LoggingFilter.messageReceived(LoggingFilter.java:208) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.codec.ProtocolCodecFilter$ProtocolDecoderOutputImpl.flush(ProtocolCodecFilter.java:398) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:250) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.logging.MdcInjectionFilter.filter(MdcInjectionFilter.java:135) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.util.CommonEventFilter.messageReceived(CommonEventFilter.java:70) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterAdapter.messageReceived(IoFilterAdapter.java:109) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.fireMessageReceived(DefaultIoFilterChain.java:535) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:703) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64) [mina-core-2.0.16.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_151]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_151]
+Caused by: java.lang.IllegalArgumentException: buf is empty. Forgot to call flip()?
+	at org.apache.mina.filter.codec.AbstractProtocolEncoderOutput.write(AbstractProtocolEncoderOutput.java:51) ~[mina-core-2.0.16.jar:na]
+	at mina.XtrlCodecFactory$XtrlEncoder.encode(XtrlCodecFactory.java:47) ~[classes/:na]
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.filterWrite(ProtocolCodecFilter.java:299) [mina-core-2.0.16.jar:na]
+	... 40 common frames omitted
+2018-01-08 18:18:22.353 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a EXCEPTION_CAUGHT event for session 2
+2018-01-08 18:18:22.353 [ NioProcessor-2 ] - [ WARN  ] [ mina.FfrqHander : 42 ] - EXCEPTION, please implement mina.FfrqHander.exceptionCaught() for proper handling:
+org.apache.mina.filter.codec.ProtocolEncoderException: java.lang.IllegalArgumentException: buf is empty. Forgot to call flip()?
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.filterWrite(ProtocolCodecFilter.java:330) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callPreviousFilterWrite(DefaultIoFilterChain.java:629) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1500(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.filterWrite(DefaultIoFilterChain.java:957) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.filterWrite(DefaultIoFilterChain.java:881) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callPreviousFilterWrite(DefaultIoFilterChain.java:629) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.fireFilterWrite(DefaultIoFilterChain.java:622) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.session.AbstractIoSession.write(AbstractIoSession.java:574) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.session.AbstractIoSession.write(AbstractIoSession.java:519) [mina-core-2.0.16.jar:na]
+	at mina.TulipHander.messageReceived(TulipHander.java:69) [classes/:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$TailFilter.messageReceived(DefaultIoFilterChain.java:858) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.logging.LoggingFilter.messageReceived(LoggingFilter.java:208) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.codec.ProtocolCodecFilter$ProtocolDecoderOutputImpl.flush(ProtocolCodecFilter.java:398) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:250) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.logging.MdcInjectionFilter.filter(MdcInjectionFilter.java:135) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.util.CommonEventFilter.messageReceived(CommonEventFilter.java:70) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterAdapter.messageReceived(IoFilterAdapter.java:109) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.fireMessageReceived(DefaultIoFilterChain.java:535) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:703) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64) [mina-core-2.0.16.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_151]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_151]
+Caused by: java.lang.IllegalArgumentException: buf is empty. Forgot to call flip()?
+	at org.apache.mina.filter.codec.AbstractProtocolEncoderOutput.write(AbstractProtocolEncoderOutput.java:51) ~[mina-core-2.0.16.jar:na]
+	at mina.XtrlCodecFactory$XtrlEncoder.encode(XtrlCodecFactory.java:47) ~[classes/:na]
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.filterWrite(ProtocolCodecFilter.java:299) [mina-core-2.0.16.jar:na]
+	... 40 common frames omitted
+2018-01-08 18:18:22.368 [ NioProcessor-2 ] - [ DEBUG ] [ mina.FfrqHander : 47 ] - connection is closed
+2018-01-08 18:18:22.368 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event EXCEPTION_CAUGHT has been fired for session 2
+2018-01-08 18:18:22.368 [ NioProcessor-2 ] - [ WARN  ] [ org.apache.mina.filter.logging.LoggingFilter : 130 ] - EXCEPTION :
+org.apache.mina.filter.codec.ProtocolDecoderException: java.lang.NumberFormatException: For input string: "¨¨" (Hexdump: 30 30 38 38 23 E0 18 51 BE 4E F3 93 5A 94 2F DF 7C 9C 6A CA E4 99 3A C5 6D FC 1F A0 A0 09 DA DE EE 29 78 46 E8 5D F7 EB 0A 1D B9 CA 52 B6 6E 8B 15 7D 6A 42 40 D1 78 68 E1 00 09 CC 70 EC 13 42 B7 0D 96 32 A6 B4 C6 E0 B7 D4 0A 36 D2 98 EA 5B 57 65 C9 AE 70 36 48 56 83 A8 8F A8)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:240) ~[mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.logging.MdcInjectionFilter.filter(MdcInjectionFilter.java:135) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.util.CommonEventFilter.messageReceived(CommonEventFilter.java:70) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterAdapter.messageReceived(IoFilterAdapter.java:109) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.fireMessageReceived(DefaultIoFilterChain.java:535) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:703) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64) [mina-core-2.0.16.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_151]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_151]
+Caused by: java.lang.NumberFormatException: For input string: "¨¨"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.8.0_151]
+	at java.lang.Integer.parseInt(Integer.java:580) ~[na:1.8.0_151]
+	at java.lang.Integer.parseInt(Integer.java:615) ~[na:1.8.0_151]
+	at mina.TulipCodecFactory$TulipDecoder.doDecode(TulipCodecFactory.java:60) ~[classes/:na]
+	at org.apache.mina.filter.codec.CumulativeProtocolDecoder.decode(CumulativeProtocolDecoder.java:181) ~[mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:231) ~[mina-core-2.0.16.jar:na]
+	... 21 common frames omitted
+2018-01-08 18:18:22.368 [ NioProcessor-2 ] - [ WARN  ] [ mina.FfrqHander : 45 ] - EXCEPTION, please implement mina.TulipHander.exceptionCaught() for proper handling:
+org.apache.mina.filter.codec.ProtocolDecoderException: java.lang.NumberFormatException: For input string: "¨¨" (Hexdump: 30 30 38 38 23 E0 18 51 BE 4E F3 93 5A 94 2F DF 7C 9C 6A CA E4 99 3A C5 6D FC 1F A0 A0 09 DA DE EE 29 78 46 E8 5D F7 EB 0A 1D B9 CA 52 B6 6E 8B 15 7D 6A 42 40 D1 78 68 E1 00 09 CC 70 EC 13 42 B7 0D 96 32 A6 B4 C6 E0 B7 D4 0A 36 D2 98 EA 5B 57 65 C9 AE 70 36 48 56 83 A8 8F A8)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:240) ~[mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterEvent.fire(IoFilterEvent.java:74) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.logging.MdcInjectionFilter.filter(MdcInjectionFilter.java:135) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.util.CommonEventFilter.messageReceived(CommonEventFilter.java:70) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.access$1300(DefaultIoFilterChain.java:48) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain$EntryImpl$1.messageReceived(DefaultIoFilterChain.java:947) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.IoFilterAdapter.messageReceived(IoFilterAdapter.java:109) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.callNextMessageReceived(DefaultIoFilterChain.java:542) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.filterchain.DefaultIoFilterChain.fireMessageReceived(DefaultIoFilterChain.java:535) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:703) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:659) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:648) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:68) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1120) [mina-core-2.0.16.jar:na]
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64) [mina-core-2.0.16.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_151]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_151]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_151]
+Caused by: java.lang.NumberFormatException: For input string: "¨¨"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65) ~[na:1.8.0_151]
+	at java.lang.Integer.parseInt(Integer.java:580) ~[na:1.8.0_151]
+	at java.lang.Integer.parseInt(Integer.java:615) ~[na:1.8.0_151]
+	at mina.TulipCodecFactory$TulipDecoder.doDecode(TulipCodecFactory.java:60) ~[classes/:na]
+	at org.apache.mina.filter.codec.CumulativeProtocolDecoder.decode(CumulativeProtocolDecoder.java:181) ~[mina-core-2.0.16.jar:na]
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:231) ~[mina-core-2.0.16.jar:na]
+	... 21 common frames omitted
+2018-01-08 18:18:22.368 [ NioProcessor-8 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 186 ] - CLOSED
+2018-01-08 18:18:22.384 [ NioProcessor-8 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a SESSION_CLOSED event for session 2
+2018-01-08 18:18:22.384 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event MESSAGE_RECEIVED has been fired for session 1
+2018-01-08 18:18:22.384 [ NioProcessor-8 ] - [ DEBUG ] [ mina.FfrqHander : 27 ] - sessionClosed {}2
+2018-01-08 18:18:22.384 [ NioProcessor-8 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event SESSION_CLOSED has been fired for session 2
+2018-01-08 18:19:46.632 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a CLOSE event for session 1
+2018-01-08 18:19:46.632 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event CLOSE has been fired for session 1
+2018-01-08 18:19:46.632 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 68 ] - Firing a SESSION_CLOSED event for session 1
+2018-01-08 18:19:46.632 [ NioProcessor-2 ] - [ INFO  ] [ org.apache.mina.filter.logging.LoggingFilter : 186 ] - CLOSED
+2018-01-08 18:19:46.632 [ NioProcessor-2 ] - [ DEBUG ] [ mina.FfrqHander : 30 ] - sessionClosed {}1
+2018-01-08 18:19:46.648 [ NioProcessor-2 ] - [ DEBUG ] [ org.apache.mina.core.filterchain.IoFilterEvent : 117 ] - Event SESSION_CLOSED has been fired for session 1
+2018-01-08 18:24:46.096 [ main ] - [ INFO  ] [ Main : 45 ] - Logging ON
