@@ -29,6 +29,18 @@ public class FfrqBody {
         return  checkCode;
     }
 
+    public byte[] getCheckCode() {
+
+        int checkcode = 0;
+
+        for(int i =0 ;i< xtrqbody.length;i++){
+            int tmp =0xff &((int)xtrqbody[i]);
+            checkcode += tmp;
+        }
+        this.checkCode = String.format("%06d",checkcode).getBytes();
+        return this.checkCode;
+    }
+
     //加密
     public void  CBCEncrypt(){
 
@@ -43,21 +55,22 @@ public class FfrqBody {
 
         byte[] enxtrqbody = DES.CBCEncrypt(xtrqbody, DES.key, DES.iv);
         xtrqbody = enxtrqbody;
-        int checkcode = 0;
-
-        for(int i =0 ;i< xtrqbody.length;i++){
-             int tmp =0xff &((int)xtrqbody[i]);
-            checkcode += tmp;
-        }
-        try {
-            checkCode =String.format("%06d",checkcode).getBytes("ISO8859-1");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
 
     }
+
+
     //解密
     public void CBCDecrypt(){
+
+        //不足8的倍数的补齐
+        if(xtrqbody.length % 8 != 0){
+            int block = xtrqbody.length / 8 ;
+            block++;
+            byte[] tmp = new byte[block*8];
+            System.arraycopy(xtrqbody,0,tmp,0,xtrqbody.length);
+            xtrqbody = tmp;
+        }
+
         byte[] dextrqbody =  DES.CBCDecrypt(xtrqbody ,DES.key, DES.iv);
         xtrqbody = dextrqbody;
     }
@@ -68,8 +81,8 @@ public class FfrqBody {
         String str = null;
 
         if( xtrqbody != null){
-            str += "FfrqBody{" +
-                    "xtrqbody=" + Hextools.Hexlog(xtrqbody,"iso8859-1");
+            str = "FfrqBody{" +
+                    "xtrqbody=" + Hextools.Hexlog(xtrqbody,"GBK");
         }
         if(checkCode != null){
             str += " checkCode = "+new String(checkCode)+"}";

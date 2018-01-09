@@ -49,7 +49,7 @@ public class FfrqHander extends IoHandlerAdapter {
     }
 
     public void messageReceived(IoSession session, Object message) throws Exception {
-        LOGGER.info("从预售房系统收到消息：");
+        LOGGER.info("从燃气公司收到：");
         LOGGER.info("从如下地址收到消息  :"+session.getRemoteAddress());
 
         FfrqBody ffrqBody = (FfrqBody) message;

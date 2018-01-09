@@ -34,6 +34,7 @@ public class TulipCodecFactory implements ProtocolCodecFactory {
             ioBuffer.setAutoExpand(true);
             ioBuffer.put(xtrlBody.getBodylen().getBytes());
             ioBuffer.put(xtrlBody.getXtrlbody());
+            ioBuffer.flip();
             protocolEncoderOutput.write(ioBuffer);
 
             log.debug("向tulip发送收数据\n{}", Hextools.Hexlog(ioBuffer.array(),"GBK"));
