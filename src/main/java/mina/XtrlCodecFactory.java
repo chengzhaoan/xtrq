@@ -57,26 +57,27 @@ public class XtrlCodecFactory  implements ProtocolCodecFactory {
 
             log.debug("从TULIP 服务器 {}, 收到字节数{} :",ioSession.getRemoteAddress(),ioBuffer.remaining());
 
-            log.debug("HEX DUMP\n{}",Hextools.Hexlog(ioBuffer.array(),"GBK"));
+            log.debug("HEX DUMP\n{}",Hextools.Hexlog(ioBuffer.array(),"iso8859-1"));
 
-            int position = ioBuffer.position();
+            int strat_position = ioBuffer.position();
+
             if(ioBuffer.remaining()<11)
                 return false;
 
             byte[] strlen = new byte[4];
 
-            ioBuffer.get(strlen,7,4);
+            ioBuffer.get(strlen);
 
             int bodylen = Integer.parseInt(new String(strlen,"ISO8859-1"));
 
             if(ioBuffer.remaining() < bodylen + 7){
+                ioBuffer.position(strat_position);
                 return false;
             }
-            ioBuffer.position(position);
 
             byte[] ffrqbody = new byte[bodylen];
 
-            ioBuffer.get(ffrqbody,11,bodylen);
+            ioBuffer.get(ffrqbody);
 
             FfrqBody ffrqBody = new FfrqBody();
             ffrqBody.setXtrlbody(ffrqbody);

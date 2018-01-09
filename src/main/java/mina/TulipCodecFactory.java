@@ -49,27 +49,27 @@ public class TulipCodecFactory implements ProtocolCodecFactory {
 
             log.debug("收到字节\n{}",ioBuffer.getHexDump());
 
-            int position = ioBuffer.position();
+            int start_position = ioBuffer.position();
+
             if(ioBuffer.remaining()<4)
                 return false;
 
             byte[] strlen = new byte[4];
 
-            ioBuffer.get(strlen,0,4);
+            ioBuffer.get(strlen);
 
             int bodylen = Integer.parseInt(new String(strlen,"ISO8859-1"));
 
             log.debug("bodylen = {}" , bodylen);
 
             if(ioBuffer.remaining() < bodylen  ){
+                ioBuffer.position(start_position);
                 return false;
             }
 
-            ioBuffer.position(position);
-
             byte[] ffrqbody = new byte[bodylen];
 
-            ioBuffer.get(ffrqbody,0,bodylen);
+            ioBuffer.get(ffrqbody);
 
             FfrqBody ffrqBody = new FfrqBody();
             ffrqBody.setXtrlbody(ffrqbody);

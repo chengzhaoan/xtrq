@@ -1,6 +1,9 @@
 package ffrq;
 
+import utils.Hextools;
+
 import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
 
 //峰峰燃气报文体
 public class FfrqBody {
@@ -57,5 +60,21 @@ public class FfrqBody {
     public void CBCDecrypt(){
         byte[] dextrqbody =  DES.CBCDecrypt(xtrqbody ,DES.key, DES.iv);
         xtrqbody = dextrqbody;
+    }
+
+    @Override
+    public String toString() {
+
+        String str = null;
+
+        if( xtrqbody != null){
+            str += "FfrqBody{" +
+                    "xtrqbody=" + Hextools.Hexlog(xtrqbody,"iso8859-1");
+        }
+        if(checkCode != null){
+            str += " checkCode = "+new String(checkCode)+"}";
+        }
+
+        return str;
     }
 }

@@ -62,10 +62,12 @@ public class TulipHander extends IoHandlerAdapter {
 
         if(thirdSession== null){
             LOGGER.error("得不到通向峰峰燃气费终端的链接");
+            return;
         }
         thirdSession.setAttribute(SocketUtils.TLP_SESSION,session);
+        LOGGER.debug(ffrqBody.toString());
         ffrqBody.CBCEncrypt();
-        LOGGER.info("加密完成后  :"+ Hextools.Hexlog(ffrqBody.getXtrlbody(),"GBK"));
+        LOGGER.info("加密完成后  :"+ Hextools.Hexlog(ffrqBody.getXtrlbody(),"iso8859-1"));
         thirdSession.write(ffrqBody);
     }
 

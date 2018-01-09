@@ -56,8 +56,9 @@ public class FfrqHander extends IoHandlerAdapter {
 
         IoSession tlp_session = (IoSession)session.getAttribute(SocketUtils.TLP_SESSION);
 
-        ffrqBody.CBCDecrypt();
 
+        ffrqBody.CBCDecrypt();
+        LOGGER.debug(ffrqBody.toString());
         tlp_session.write(ffrqBody);
 
         tlp_session.closeOnFlush();
