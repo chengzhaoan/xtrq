@@ -32,7 +32,7 @@ public class TulipCodecFactory implements ProtocolCodecFactory {
             FfrqBody xtrlBody = (FfrqBody)o;
             IoBuffer ioBuffer = IoBuffer.allocate(4 + xtrlBody.getXtrlbody().length);
             ioBuffer.setAutoExpand(true);
-            ioBuffer.put(xtrlBody.getBodylen().getBytes());
+            ioBuffer.putInt(xtrlBody.getXtrlbody().length);
             ioBuffer.put(xtrlBody.getXtrlbody());
             ioBuffer.flip();
             protocolEncoderOutput.write(ioBuffer);
@@ -48,20 +48,16 @@ public class TulipCodecFactory implements ProtocolCodecFactory {
             log.debug("从TULIP 服务器 {}, 收到字节数{}, :",ioSession.getRemoteAddress(),ioBuffer.remaining());
 
 
-            log.debug("收到字节\n{}",ioBuffer.getHexDump());
+            log.debug("收到字节{}\n{}",ioBuffer.remaining(),ioBuffer.getHexDump());
 
             int start_position = ioBuffer.position();
 
             if(ioBuffer.remaining()<4)
                 return false;
 
-            byte[] strlen = new byte[4];
+            int bodylen = ioBuffer.getInt();
 
-            ioBuffer.get(strlen);
-
-            int bodylen = Integer.parseInt(new String(strlen,"ISO8859-1"));
-
-            log.debug("bodylen = {}" , bodylen);
+            log.info("包体长度 bodylen = {}" , bodylen);
 
             if(ioBuffer.remaining() < bodylen  ){
                 ioBuffer.position(start_position);

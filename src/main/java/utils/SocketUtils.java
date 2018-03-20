@@ -21,7 +21,7 @@ public class SocketUtils {
 
     public static final String TLP_SESSION = "TLP_SESSION";
     public static final String CONNECTER   = "CONNECTER";
-
+    public static final int DefaultConnectTimeOut = 1000;
     public static final int MAX_TIMEOUT =90;
 
 
@@ -48,19 +48,27 @@ public class SocketUtils {
             chain.addLast("codec",  new ProtocolCodecFilter(protocolCodecFactory));
             conn.setHandler(ioHandler);
             //重复三次
-            for(int conn_count = 0 ;conn_count < 4;conn_count++){
-                connectFuture = conn.connect(addr);
-                connectFuture.awaitUninterruptibly();
-                if(connectFuture.isConnected())
-                    session= connectFuture.getSession();
-                    session.setAttribute(CONNECTER,conn);
-                    //conHashMap.put(session.getId(),conn);//注意这个bug的处理
-                    break;
+
+            conn.setConnectTimeoutMillis(DefaultConnectTimeOut);
+
+
+            connectFuture = conn.connect(addr);
+            connectFuture.awaitUninterruptibly();
+
+            if  (connectFuture.isDone()) {
+                if  (!connectFuture.isConnected()) {  //若在指定时间内没连接成功，则抛出异常
+                    LOGGER.info("fail to connect "  );
+                    conn.dispose();    //不关闭的话会运行一段时间后抛出，too many open files异常，导致无法连接
+                    throw   new  Exception();
+                }
             }
+            session = connectFuture.getSession();
+            session.setAttribute(CONNECTER,conn);
+
             LOGGER.debug("链接成功{},{}",session.getId(),session.getRemoteAddress());
         }catch (Exception e){
             e.printStackTrace();
-            LOGGER.warn("链接房管局段失败"+e.toString());
+            LOGGER.warn("链接燃气服务器失败"+e.toString());
         }finally {
 //            if(conn!= null){
 //                conn.dispose();

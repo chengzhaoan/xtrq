@@ -15,17 +15,17 @@ public class FfrqHander extends IoHandlerAdapter {
     private static Logger LOGGER  =  LoggerFactory.getLogger(FfrqHander.class);
 
     public void sessionCreated(IoSession session) throws Exception {
-        session.getConfig().setIdleTime(IdleStatus.BOTH_IDLE, SocketUtils.MAX_TIMEOUT);
         LOGGER.debug("sessionCreated {}"+session.getId());
     }
 
     public void sessionOpened(IoSession session) throws Exception {
+        session.getConfig().setIdleTime(IdleStatus.BOTH_IDLE, SocketUtils.MAX_TIMEOUT);
         LOGGER.debug("sessionOpened {}"+session.getId());
     }
 
     public void sessionClosed(IoSession session) throws Exception {
         LOGGER.debug("sessionClosed {}"+session.getId());
-        NioSocketConnector conn = (NioSocketConnector)session.getAttribute("connection");
+        NioSocketConnector conn = (NioSocketConnector)session.getAttribute(SocketUtils.CONNECTER);
         if(conn != null && conn.isActive()){
             conn.dispose();
             LOGGER.debug("connection is closed");
@@ -34,7 +34,12 @@ public class FfrqHander extends IoHandlerAdapter {
 
     public void sessionIdle(IoSession session, IdleStatus status) throws Exception {
         LOGGER.debug("sessionIdle {}"+session.getId());
-        session.closeOnFlush();
+        NioSocketConnector conn =(NioSocketConnector) session.getAttribute(SocketUtils.CONNECTER);
+        if( conn != null && conn.isActive()){
+            conn.dispose();
+            LOGGER.debug("connection is closed");
+        }
+        session.closeNow();
     }
 
     public void exceptionCaught(IoSession session, Throwable cause) throws Exception {
@@ -46,6 +51,7 @@ public class FfrqHander extends IoHandlerAdapter {
             conn.dispose();
             LOGGER.debug("connection is closed");
         }
+        session.closeNow();
     }
 
     public void messageReceived(IoSession session, Object message) throws Exception {
@@ -69,15 +75,9 @@ public class FfrqHander extends IoHandlerAdapter {
     }
 
     public void messageSent(IoSession session, Object message) throws Exception {
-        LOGGER.warn("消息发往峰峰燃气服务器");
+        LOGGER.debug("消息发往峰峰燃气服务器");
     }
 
-    public void inputClosed(IoSession session) throws Exception {
-        NioSocketConnector conn = (NioSocketConnector)session.getAttribute(SocketUtils.CONNECTER);
-        if(conn!=null)
-            conn.dispose();
-        session.closeNow();
-    }
 
 
 }

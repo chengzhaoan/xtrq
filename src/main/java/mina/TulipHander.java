@@ -18,26 +18,27 @@ public class TulipHander extends IoHandlerAdapter {
     private static Logger LOGGER  =  LoggerFactory.getLogger(FfrqHander.class);
 
     public void sessionCreated(IoSession session) throws Exception {
-        session.getConfig().setIdleTime(IdleStatus.BOTH_IDLE, SocketUtils.MAX_TIMEOUT);
-        LOGGER.debug("sessionCreated {}"+session.getId());
+
+        LOGGER.debug("TULIP sessionCreated {}"+session.getId());
     }
 
     public void sessionOpened(IoSession session) throws Exception {
-        LOGGER.debug("sessionOpened {}"+session.getId());
+        session.getConfig().setIdleTime(IdleStatus.BOTH_IDLE, SocketUtils.MAX_TIMEOUT);
+        LOGGER.debug("TULIP sessionOpened {}"+session.getId());
     }
 
     public void sessionClosed(IoSession session) throws Exception {
-        LOGGER.debug("sessionClosed {}"+session.getId());
-        NioSocketConnector conn = (NioSocketConnector)session.getAttribute("connection");
+        LOGGER.debug("TULIP sessionClosed {}"+session.getId());
+        NioSocketConnector conn = (NioSocketConnector)session.getAttribute(SocketUtils.CONNECTER);
         if(conn != null && conn.isActive()){
             conn.dispose();
-            LOGGER.debug("connection is closed");
+            LOGGER.debug("TULIP connection is closed");
         }
     }
 
     public void sessionIdle(IoSession session, IdleStatus status) throws Exception {
-        LOGGER.debug("sessionIdle {}"+session.getId());
-        session.closeOnFlush();
+        LOGGER.debug("TULIP sessionIdle {}"+session.getId());
+        session.closeNow();
     }
 
     public void exceptionCaught(IoSession session, Throwable cause) throws Exception {
@@ -45,14 +46,15 @@ public class TulipHander extends IoHandlerAdapter {
             LOGGER.warn("EXCEPTION, please implement " + this.getClass().getName() + ".exceptionCaught() for proper handling:", cause);
         }
         NioSocketConnector conn =(NioSocketConnector) session.getAttribute(SocketUtils.CONNECTER);
-        if( conn != null && conn.isActive()){
+        if( conn != null && conn.isActive()){//tulip session里应该不用写这这个代码吧
             conn.dispose();
-            LOGGER.debug("connection is closed");
+            LOGGER.debug("TULIP connection is closed");
         }
+        session.closeNow();
     }
 
     public void messageReceived(IoSession session, Object message) throws Exception {
-
+        LOGGER.debug("TULIP messageReceived {}"+session.getId());
         LOGGER.info("从Tulip收到如下消息：");
         LOGGER.info("从如下地址收到消息  :"+session.getRemoteAddress());
 
@@ -69,15 +71,11 @@ public class TulipHander extends IoHandlerAdapter {
         ffrqBody.CBCEncrypt();
         LOGGER.info("加密完成后  :"+ Hextools.Hexlog(ffrqBody.getXtrlbody(),"iso8859-1"));
         thirdSession.write(ffrqBody);
+
     }
 
     public void messageSent(IoSession session, Object message) throws Exception {
+        LOGGER.info("TULIP messageSent {}",session.getId());
+    }
 
-    }
-    public void inputClosed(IoSession session) throws Exception {
-        NioSocketConnector conn = (NioSocketConnector)session.getAttribute(SocketUtils.CONNECTER);
-        if(conn!=null)
-            conn.dispose();
-        session.closeNow();
-    }
 }

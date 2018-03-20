@@ -7,7 +7,7 @@ debug£ºµ±´ËÊôÐÔÉèÖÃÎªtrueÊ±£¬½«´òÓ¡³ölogbackÄÚ²¿ÈÕÖ¾ÐÅÏ¢£¬ÊµÊ±²é¿´logbackÔËÐÐ×´Ì
 <configuration scan="false" scanPeriod="60 seconds" debug="true">
     <!-- ¶¨ÒåÈÕÖ¾µÄ¸ùÄ¿Â¼ -->
 
-    <property name="LOG_HOME" value="C:\Users\chengzhaoan\Documents" />
+    <property name="LOG_HOME" value="/home/tulip/ffrq/log/" />
     <!--<property name="LOG_HOME" value="/home/tulip/data/ffrq/log/" />-->
     <!-- ¶¨ÒåÈÕÖ¾ÎÄ¼þÃû³Æ -->
     <property name="appName" value="FFRQ_LOG"></property>
@@ -25,7 +25,7 @@ debug£ºµ±´ËÊôÐÔÉèÖÃÎªtrueÊ±£¬½«´òÓ¡³ölogbackÄÚ²¿ÈÕÖ¾ÐÅÏ¢£¬ÊµÊ±²é¿´logbackÔËÐÐ×´Ì
 
     <!-- ¹ö¶¯¼ÇÂ¼ÎÄ¼þ£¬ÏÈ½«ÈÕÖ¾¼ÇÂ¼µ½Ö¸¶¨ÎÄ¼þ£¬µ±·ûºÏÄ³¸öÌõ¼þÊ±£¬½«ÈÕÖ¾¼ÇÂ¼µ½ÆäËûÎÄ¼þ -->
     <appender name="appLogAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <Encoding>UTF-8</Encoding>
+        <Encoding>GBK</Encoding>
         <!-- Ö¸¶¨ÈÕÖ¾ÎÄ¼þµÄÃû³Æ -->
         <file>${LOG_HOME}/${appName}.log</file>
         <!--

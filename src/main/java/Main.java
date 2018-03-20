@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import utils.SocketUtils;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -51,8 +52,9 @@ public class Main {
     public static void LoadConfig() throws IOException {
 
         Properties defaultProps = new Properties();
-        FileInputStream in = new FileInputStream("C:\\Users\\chengzhaoan\\workspace\\xtrq\\src\\main\\resources\\config.properties");
-
+        //实际环境
+       FileInputStream in = new FileInputStream(System.getProperty("user.dir")+ File.separator+"config.properties");
+       // FileInputStream in = new FileInputStream(System.getProperty("user.dir")+File.separator+"target"+ File.separator+"config.properties");
         defaultProps.load(in);
 //        iv=!@#hd#@!
 //        key=!@#hd#@!

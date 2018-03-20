@@ -41,7 +41,7 @@ public class XtrlCodecFactory  implements ProtocolCodecFactory {
 
             IoBuffer ioBuffer = IoBuffer.allocate(FFRL_PKG_HEADER_LEN+ xtrlBody.getXtrlbody().length);
             ioBuffer.setAutoExpand(true);
-            ioBuffer.put("PKHDGAS".getBytes());
+            ioBuffer.put("PKHDGAS".getBytes("iso8859-1"));
             ioBuffer.put(xtrlBody.getBodylen().getBytes());
             ioBuffer.put(xtrlBody.getCheckCode());
             ioBuffer.put(xtrlBody.getXtrlbody());
@@ -49,7 +49,7 @@ public class XtrlCodecFactory  implements ProtocolCodecFactory {
             ioBuffer.flip();
             protocolEncoderOutput.write(ioBuffer);
 
-            log.debug("向tulip发送收数据\n{}", Hextools.Hexlog(ioBuffer.array(),"GBK"));
+            log.debug("向燃气公司发送收数据\n{}", Hextools.Hexlog(ioBuffer.array(),"GBK"));
         }
     }
 
@@ -59,18 +59,23 @@ public class XtrlCodecFactory  implements ProtocolCodecFactory {
 
             log.debug("从 燃气服务器 {}, 收到字节数{} :",ioSession.getRemoteAddress(),ioBuffer.remaining());
 
-            log.debug("HEX DUMP\n{}",Hextools.Hexlog(ioBuffer.array(),"iso8859-1"));
+            log.debug("HEX DUMP\n{}",ioBuffer.getHexDump());
 
             int strat_position = ioBuffer.position();
 
             if(ioBuffer.remaining()<11)
                 return false;
 
-            byte[] strlen = new byte[4];
             ioBuffer.position(strat_position + 7);
-            ioBuffer.get(strlen);
 
-            int bodylen = Integer.parseInt(new String(strlen,"ISO8859-1"));
+            byte[] bbodylen = new byte[4];
+
+            ioBuffer.get(bbodylen);
+
+            int bodylen = Integer.parseInt(new String(bbodylen,"iso8859-1"));
+
+
+            log.debug("解析出包长度为{}",bodylen);
 
             if(ioBuffer.remaining() < bodylen + 7){
                 ioBuffer.position(strat_position);
@@ -90,6 +95,8 @@ public class XtrlCodecFactory  implements ProtocolCodecFactory {
 
             if(!Arrays.equals(ffrqBody.getCheckCode(),checkCode)){
                 log.error("ffrqBody count {}, and checkCode receive {} is not equal",Arrays.toString(ffrqBody.getCheckCode()),Arrays.toString(checkCode));
+            }else{
+                log.debug("校验成功:计算校验值{} ，原校验值{}",Hextools.Hexlog(ffrqBody.getCheckCode(),"GBK"),Hextools.Hexlog(checkCode,"GBK"));
             }
             log.debug("通知报文文件名称为\n{}",Hextools.Hexlog(ffrqBody.getXtrlbody(),"GBK"));
             protocolDecoderOutput.write(ffrqBody);
